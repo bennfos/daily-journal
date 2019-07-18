@@ -1,5 +1,59 @@
+@font-face {
+    font-family: "Amity";
+    src: url("Amity.ttf");
+}
+
+body {
+    background-image: url("http://eyelearn.org/ma-stu-gallery/filmProj-2013/adam/images/no-shark.png");
+    background-size: 100% 100%
+}
+
 .journalEntryForm {
     display: flex;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.entry {
+    width: 500px;
+    border: 2px solid grey;
+    margin: 10px;
+    padding: 20px;
+}
+
+#recordEntryButton {
+    padding: 30px;
+    margin: 20px;
+}
+
+.heading {
+    display: flex;
+    color: rgb(192, 54, 54);
+    justify-content: center;
+    font-family: "Amity";
+    font-size: 60px;
+    margin: 30px 0 15px 0;
+    height: 245px;
+}
+
+.serif {
+    font-family: 'DM Serif Display', serif;
+    font-size: 35px;
+}
+
+.serif--small {
+    font-size: 25px;
+}
+
+.serif--big {
+    font-size: 35px;
+}
+
+.serif--tiny {
+    font-size: 18px;
+}
+
+.archivo {
+    font-family: 'Archivo Black', sans-serif;
 }
 
