@@ -20,7 +20,7 @@ const journalEntryJuly18 = {
     date: "7/18/2019",
     concept: "APIs, Rendering to the DOM, LinkedIn",
     entry: "Struggling with the steps to take to get the functions to work that render HTML to the DOM. Also need to remember not to procrastinate with LinkedIn. Keep up with it and it will save a lot of time. I have very little idea what's going on with APIs, but today was just an intro",
-    mood: "I'll catch this bird for ya, but it ain't gonna be easy"
+    mood: "I'll catch this bird for ya, but it ain't gonna be easy."
 }
 
 const journalEntryJuly17 = {
@@ -47,14 +47,15 @@ addEntry(journalEntryJuly15)
 
 
 
+
 const makeJournalEntryComponent = (journalEntry) => {
     // Create your own HTML structure for a journal entry
     const entryHTML = `
         <div class="entry journalEntryForm">
-            <h2 class="serif serif--small" >${journalEntry.concept}</h2>
-            <p class="archivo">${journalEntry.date}</p>
+            <h2 class="bottomMarginSmall serif serif--small" >${journalEntry.concept}</h2>
+            <p class="topMarginSmall archivo">${journalEntry.date}</p>
             <p class="serif serif--tiny">${journalEntry.entry}</p>
-            <p class="serif serif--tiny">Mood: ${journalEntry.mood}</p>
+            <p class="serif serif--tiny">Mood: "${journalEntry.mood}"</p>
         </div>
     `
        entryContainer.innerHTML += entryHTML
