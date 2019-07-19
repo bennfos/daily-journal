@@ -10,21 +10,41 @@ html {
 main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
 }
 
 .journalEntryForm {
     background-color: rgba(255, 255, 255, 0.85);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
 }
 
 .entry {
     width: 700px;
+    height: 300px;
     border: 5px solid black;
     margin: 10px;
     padding: 20px;
+}
+
+.entryLog {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.gif {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.gifLink {
+    width: 400px;
+    height: 300px;
+    margin: 40px 15px 0 150px
+
 }
 
 #recordEntryButton {
@@ -38,8 +58,8 @@ main {
     width: 800px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     border: 5px solid black;
+
 }
 
 .heading {
