@@ -33,6 +33,8 @@ const biggerBoatGIF = `<img class="gifLink" src="https://media.giphy.com/media/d
 const farewellGIF = `<img class="gifLink" src="https://media.giphy.com/media/6frspGzg5uC5i/giphy.gif"></img>`
 
 
+
+
 const makeJournalEntryComponent = (journalEntry) => {
     // Create your own HTML structure for a journal entry
     
@@ -67,59 +69,27 @@ const makeJournalEntryComponent = (journalEntry) => {
 }
 
 
-//Write new entry here
 
-const test1 = {
-    date: "7/18/2019",
-    concept: "APIs, Rendering to the DOM, LinkedIn",
-    entry: "Struggling with the steps to take to get the functions to work that render HTML to the DOM. Also need to remember not to procrastinate with LinkedIn. Keep up with it and it will save a lot of time. I have very little idea what's going on with APIs, but today was just an intro",
-    mood: biggerBoat
+//Fetch entries from API, then parse them to JSON, then make and render components to DOM
+const getAndRenderEntries = () => {
+    fetch("http://localhost:3000/entries")
+    .then(response => response.json())
+    .then(entries => {
+        entries.forEach(currentEntry => {
+            makeJournalEntryComponent(currentEntry); 
+        })
+    })
 }
 
-const test2 = {
-    date: "7/18/2019",
-    concept: "APIs, Rendering to the DOM, LinkedIn",
-    entry: "Struggling with the steps to take to get the functions to work that render HTML to the DOM. Also need to remember not to procrastinate with LinkedIn. Keep up with it and it will save a lot of time. I have very little idea what's going on with APIs, but today was just an intro",
-    mood: farewell
-}
+getAndRenderEntries();
 
-const test3 = {
-    date: "7/18/2019",
-    concept: "APIs, Rendering to the DOM, LinkedIn",
-    entry: "Struggling with the steps to take to get the functions to work that render HTML to the DOM. Also need to remember not to procrastinate with LinkedIn. Keep up with it and it will save a lot of time. I have very little idea what's going on with APIs, but today was just an intro",
-    mood: smile
-}
-
-
-const journalEntryJuly18 = {
-    date: "7/18/2019",
-    concept: "APIs, Rendering to the DOM, LinkedIn",
-    entry: "Struggling with the steps to take to get the functions to work that render HTML to the DOM. Also need to remember not to procrastinate with LinkedIn. Keep up with it and it will save a lot of time. I have very little idea what's going on with APIs, but today was just an intro",
-    mood: catchBird
-}
-
-const journalEntryJuly17 = {
-    date: "7/17/2019",
-    concept: "Components and Functions",
-    entry: "Learned about adding HTML components to the DOM dynamically with Javascript. Struggled with the functions but ultimately finished almost all the exercises.",
-    mood: drowning
-}
-
-const journalEntryJuly15 = {
-    date: "7/15/2019",
-    concept: "Functions",
-    entry: "Practiced creating functions with Book 2, ch. 4 exercises. Was able to get most of them but struggled with using the forEach array method within functions",
-    mood: keepKicking
-}
 
 //Add entry to entry array here
 
-addEntry(test1)
-addEntry(test2)
-addEntry(test3)
-addEntry(journalEntryJuly18)
-addEntry(journalEntryJuly17)
-addEntry(journalEntryJuly15)
+
+// addEntry(journalEntryJuly18)
+// addEntry(journalEntryJuly17)
+// addEntry(journalEntryJuly15)
 
 
 // createGIF(url "https://media.giphy.com/media/3o85xyxJ55W5SZZi1i/giphy.gif")
@@ -130,14 +100,9 @@ addEntry(journalEntryJuly15)
     Arguments: entries (array of objects)
 */
 
-const renderEntries = () => {
-    journalEntries.forEach(currentEntry => {
-        makeJournalEntryComponent(currentEntry);
-    })
-}
+
 
 
 // Invoke the render function
 
-renderEntries();
 
