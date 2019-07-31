@@ -19,35 +19,42 @@
         <div class="heading">
             <h1>Journal</h1>
         </div>
-        <form class="form" action="">
-            <fieldset class="journalEntryForm">
-                <label class="serif" for="journalDate">Date of Entry</label>
-                <input type="date" name="journalDate" id="journalDate">
-            </fieldset>
-            <fieldset class="journalEntryForm">
-                <label class="serif" for="conceptsCovered">Concepts Covered</label>
-                <input type="text" name="conceptsCovered" id="conceptsCovered">
-            </fieldset>
-            <fieldset class="journalEntryForm">
-                <label class="serif" for="journalEntry">Journal Entry</label>
-                <textarea name="journalEntry" id="journalEntry" rows="5" columns="80"></textarea>
-            </fieldset>
-            <fieldset class="journalEntryForm">
-                <label class="serif" for="mood">Mood for the day</label>
-                <select name="mood" id="mood">
-                    <option value="6">Smile, you son of a bitch.</option>
-                    <option value="5">I think the tide's with us. --Keep kicking.</option>
-                    <option value="4">I'll catch this bird for ya, but it ain't gonna be easy.</option>
-                    <option value="3">You're gonna need a bigger boat.</option>
-                    <option value="2">There's a clinical name for it, isn't there? --Drowning.</option>
-                    <option value="1">🎶Farewell and adieu to you, fair Spanish ladies🎶</option>
-                </select>
-            </fieldset>
-        </form>
-        <input type="submit" id="recordEntryButton" value="Record Journal Entry" style="font-family: 'DM Serif Display', serif">
-        <article class="entryLog">
-
+        <div id="formContainer">
+            <form class="form" action="">
+                <fieldset class="journalEntryForm">
+                    <label class="serif" for="journalDate">Date of Entry</label>
+                    <input type="date" name="journalDate" id="journalDate">
+                </fieldset>
+                <fieldset class="journalEntryForm">
+                    <label class="serif" for="conceptsCovered">Concepts Covered</label>
+                    <input type="text" name="conceptsCovered" id="conceptsCovered">
+                </fieldset>
+                <fieldset class="journalEntryForm">
+                    <label class="serif" for="journalEntry">Journal Entry</label>
+                    <textarea name="journalEntry" id="journalEntry" rows="5" columns="80"></textarea>
+                </fieldset>
+                <fieldset class="journalEntryForm">
+                    <label class="serif" for="mood">Mood for the day</label>
+                    <select name="mood" id="mood">
+                        <option value="6">Smile, you son of a bitch.</option>
+                        <option value="5">I think the tide's with us. --Keep kicking.</option>
+                        <option value="4">I'll catch this bird for ya, but it ain't gonna be easy.</option>
+                        <option value="3">You're gonna need a bigger boat.</option>
+                        <option value="2">There's a clinical name for it, isn't there? --Drowning.</option>
+                        <option value="1">🎶Farewell and adieu to you, fair Spanish ladies🎶</option>
+                    </select>
+                </fieldset>
+            </form>
+            <input type="submit" id="recordEntryButton" value="Record Journal Entry" style="font-family: 'DM Serif Display', serif">
+        </div>
+        
+        <div id="entryLogContainer">
+            <article class="entryLog">
+        </div>
         </article>
+        <script src="scripts/data.js"></script>
+        <script src="scripts/factory.js"></script>
+        <script src="scripts/dom.js"></script>
         <script src="scripts/journal.js"></script>
     </main>
 </body>

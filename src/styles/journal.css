@@ -10,7 +10,13 @@ html {
 main {
     display: flex;
     flex-direction: column;
+    
+}
+
+#formContainer {
+    display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 .journalEntryForm {
@@ -20,18 +26,26 @@ main {
     align-content: left
 }
 
+
 .entry {
-    width: 700px;
+    width: 500px;
     height: 300px;
     border: 5px solid black;
     margin: 10px;
     padding: 20px;
 }
 
+#entryLogContainer {
+    display: flex;
+    align-items: column-reverse;
+}
+
 .entryLog {
     display: flex;
-    flex-wrap: wrap
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
 }
+
 
 .gif {
     display: flex;
@@ -41,17 +55,19 @@ main {
 }
 
 .gifLink {
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
     margin: 40px 15px 0 150px
 
 }
 
 #recordEntryButton {
-    padding: 30px;
-    margin: 20px;
+    padding: 8px;
+    margin: 15px;
     opacity: 0.85;
-    width: 130px;
+    width: 160px;
+    border-radius: 8px;
+    justify-content: center;
 }
 
 .form {

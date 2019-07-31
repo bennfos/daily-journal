@@ -1,26 +1,32 @@
 {
-    "entries": [
-
-        {
-            "date": "7/18/2019",
-            "concept": "APIs, Rendering to the DOM, LinkedIn",
-            "entry": "Struggling with the steps to take to get the functions to work that render HTML to the DOM. Also need to remember not to procrastinate with LinkedIn. Keep up with it and it will save a lot of time. I have very little idea what's going on with APIs, but today was just an intro",
-            "mood": "I'll catch this bird for ya, but it ain't gonna be easy."
-        },
-
-        {
-            "date": "7/17/2019",
-            "concept": "Components and Functions",
-            "entry": "Learned about adding HTML components to the DOM dynamically with Javascript. Struggled with the functions but ultimately finished almost all the exercises.",
-            "mood": "There's a clinical name for it, isn't there? --Drowning."
-        },
-
-        {
-            "date": "7/15/2019",
-            "concept": "Functions",
-            "entry": "Practiced creating functions with Book 2, ch. 4 exercises. Was able to get most of them but struggled with using the forEach array method within functions",
-            "mood": "I think the tide's with us. --Keep kicking."
-        }
-        
-    ]
+  "entries": [
+    {
+        "date": "7/15/2019",
+        "concept": "Functions",
+        "entry": "Practiced creating functions with Book 2, ch. 4 exercises. Was able to get most of them but struggled with using the forEach array method within functions",
+        "mood": "I think the tide's with us. --Keep kicking.",
+        "id": 1
+    },
+    {
+        "date": "7/17/2019",
+        "concept": "Components and Functions",
+        "entry": "Learned about adding HTML components to the DOM dynamically with Javascript. Struggled with the functions but ultimately finished almost all the exercises.",
+        "mood": "There's a clinical name for it, isn't there? --Drowning.",
+        "id": 2
+    },
+    {
+      "date": "7/18/2019",
+      "concept": "APIs, Rendering to the DOM, LinkedIn",
+      "entry": "Struggling with the steps to take to get the functions to work that render HTML to the DOM. Also need to remember not to procrastinate with LinkedIn. Keep up with it and it will save a lot of time. I have very little idea what's going on with APIs, but today was just an intro",
+      "mood": "I'll catch this bird for ya, but it ain't gonna be easy.",
+      "id": 3
+    },
+    {
+      "date": "7/30/2019",
+      "concept": "Welcome to Nashville",
+      "entry": "Blahh",
+      "mood": "Smile, you son of a bitch.",
+      "id": 4
+    }
+  ]
 }
