@@ -46,12 +46,10 @@ const factory = {
 }
 
 const makeEntryObject = (date, concept, entry, mood) => {
-    return `
-        {
-            "date": "${date}",
-            "concept": "${concept}",
-            "entry": "${entry}",
-            "mood": "${mood}"
+    return {
+            date: date,
+            concept: concept,
+            entry: entry,
+            mood: mood
         }
-    `
 }
