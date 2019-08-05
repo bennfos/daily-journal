@@ -19,32 +19,18 @@ const addEntry = (journalEntry) => {
 // Invoke function to fetch and render entries 
 API.getEntriesData()
 .then(entries => {
-    for (let entry of entries) {
-        let entryHTML = factory.makeJournalEntryComponent(entry)
-        render.renderEntry(entryHTML)
-    }
-})
-
-// const saveJournalEntry = (newEntry) => {
-//     return fetch("http://localhost:3000/entries", {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "applicatino/json"
-//         },
-//         body: JSON.stringify(newEntry)
-//         }
-//     )
-// }
+        render.renderEntry(entries)
+    })
 
 
 button.addEventListener("click", (event) => {
     const newEntry = makeEntryObject(dateInput.value, conceptInput.value, entryInput.value, moodInput.value)
-    let newEntryHTML = factory.makeJournalEntryComponent(newEntry)
-    console.log(newEntry)
     API.saveJournalEntry(newEntry)
-        .then(API.getEntriesData())
-        .then(render.renderEntry(newEntryHTML))
-    })
+        .then(() => {
+            API.getEntriesData()
+            .then(entries => render.renderEntry(entries))
+        })
+})
     
 
 
