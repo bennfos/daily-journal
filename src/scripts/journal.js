@@ -5,14 +5,10 @@ const moodInput = document.getElementById("mood")
 const button = document.getElementById("recordEntryButton")
 
 
-// Define an array that will hold all types of journal entries
-journalEntries = []
 
-// Adds journal entry objects to entries array
-const addEntry = (journalEntry) => {
-    journalEntries.push(journalEntry);
-}
-
+import render from "./dom.js"
+import API from "./data.js"
+import factoryObject from "./factory.js"
 
 
 
@@ -24,9 +20,9 @@ API.getEntriesData()
 
 
 button.addEventListener("click", (event) => {
-    const newEntry = makeEntryObject(dateInput.value, conceptInput.value, entryInput.value, moodInput.value)
+    const newEntry = factoryObject.factory.makeEntryObject(dateInput.value, conceptInput.value, entryInput.value, moodInput.value)
     API.saveJournalEntry(newEntry)
-        .then(() => {
+        .then(() => { 
             API.getEntriesData()
             .then(entries => render.renderEntry(entries))
         })

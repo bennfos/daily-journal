@@ -12,6 +12,7 @@ const smileGIF = `<img class="gifLink" src="https://media.giphy.com/media/10FxDn
 const drowningGIF = `<img class="gifLink" src="https://media.giphy.com/media/tsSp7dZRkGlK53G8vM/giphy.gif"></img>`
 const biggerBoatGIF = `<img class="gifLink" src="https://media.giphy.com/media/ds6uvzSJqgp8I/giphy.gif"></img>`
 const farewellGIF = `<img class="gifLink" src="https://media.giphy.com/media/6frspGzg5uC5i/giphy.gif"></img>`
+const entryContainer = document.querySelector(".entryLog")
 
 const factory = {
     makeJournalEntryComponent (journalEntry) {
@@ -42,14 +43,17 @@ const factory = {
             <p class="serif serif--tiny">Mood: "${journalEntry.mood}"</p>
         </div>
     `
+    },
+    makeEntryObject (date, concept, entry, mood) {
+        return {
+                date: date,
+                concept: concept,
+                entry: entry,
+                mood: mood
+            }
     }
 }
 
-const makeEntryObject = (date, concept, entry, mood) => {
-    return {
-            date: date,
-            concept: concept,
-            entry: entry,
-            mood: mood
-        }
-}
+
+
+export default {factory, entryContainer}

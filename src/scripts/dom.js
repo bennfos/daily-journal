@@ -1,13 +1,16 @@
 
-const entryContainer = document.querySelector(".entryLog")
+
+
+import factoryObject from "./factory.js"
 
 const render = {
     renderEntry (entries) {
-        entryContainer.innerHTML = ""
+        factoryObject.entryContainer.innerHTML = ""
         for (let entry of entries) {
-            let entryHTML = factory.makeJournalEntryComponent(entry)
-        entryContainer.innerHTML += entryHTML
+            let entryHTML = factoryObject.factory.makeJournalEntryComponent(entry)
+        factoryObject.entryContainer.innerHTML += entryHTML
         }
     }
 }
 
+export default render
