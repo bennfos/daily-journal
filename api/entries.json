@@ -22,11 +22,11 @@
       "id": 3
     },
     {
-      "date": "2019-08-13",
-      "concept": "test",
-      "entry": "test",
-      "mood": "Smile, you son of a bitch.",
-      "id": 4
+      "date": "2019-08-05",
+      "concept": "Daily journal, API, git",
+      "entry": "So today, I helped some friends with their journals, which was a great way to reinforce my learning of the JavaScript functions and how they interact with the API. BUT THEN, I realized I had accidentally deleted quite a few uncommitted changes to my own journal code....which meant it was not working, which meant I had to spend the rest of the rewriting it, which meant re-tracking-down stupid mistakes, such as typing \"applicaTINO\" instead of application. So THAT was cool.",
+      "mood": "🎶Farewell and adieu to you, fair Spanish ladies🎶",
+      "id": 5
     }
   ]
 }
