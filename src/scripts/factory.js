@@ -50,7 +50,7 @@ const factory = {
                 concept: concept,
                 entry: entry,
                 mood: mood
-            }
+        }
     }
 }
 

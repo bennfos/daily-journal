@@ -21,6 +21,9 @@ API.getEntriesData()
 
 button.addEventListener("click", (event) => {
     const newEntry = factoryObject.factory.makeEntryObject(dateInput.value, conceptInput.value, entryInput.value, moodInput.value)
+    if (dateInput.value === "" || conceptInput.value === "" || entryInput.value === "" || moodInput.value === "") {
+        alert("Please fill in all fields before submitting")
+    }
     API.saveJournalEntry(newEntry)
         .then(() => { 
             API.getEntriesData()

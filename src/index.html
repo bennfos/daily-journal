@@ -23,19 +23,20 @@
             <form class="form" action="">
                 <fieldset class="journalEntryForm">
                     <label class="serif" for="journalDate">Date of Entry</label>
-                    <input type="date" name="journalDate" id="journalDate">
+                    <input required type="date" name="journalDate" id="journalDate">
                 </fieldset>
                 <fieldset class="journalEntryForm">
                     <label class="serif" for="conceptsCovered">Concepts Covered</label>
-                    <input type="text" name="conceptsCovered" id="conceptsCovered">
+                    <input required type="text" name="conceptsCovered" id="conceptsCovered">
                 </fieldset>
                 <fieldset class="journalEntryForm">
                     <label class="serif" for="journalEntry">Journal Entry</label>
-                    <textarea name="journalEntry" id="journalEntry" rows="5" columns="80"></textarea>
+                    <textarea required name="journalEntry" id="journalEntry" rows="5" columns="80"></textarea>
                 </fieldset>
                 <fieldset class="journalEntryForm">
                     <label class="serif" for="mood">Mood for the day</label>
-                    <select name="mood" id="mood">
+                    <select required name="mood" id="mood">
+                            <option value="" disabled selected>Select your current mood</option>
                         <option value="Smile, you son of a bitch.">Smile, you son of a bitch.</option>
                         <option value="I think the tide's with us. --Keep kicking.">I think the tide's with us. --Keep kicking.</option>
                         <option value="I'll catch this bird for ya, but it ain't gonna be easy.">I'll catch this bird for ya, but it ain't gonna be easy.</option>
