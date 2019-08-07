@@ -14,6 +14,7 @@ const biggerBoatGIF = `<img class="gifLink" src="https://media.giphy.com/media/d
 const farewellGIF = `<img class="gifLink" src="https://media.giphy.com/media/6frspGzg5uC5i/giphy.gif"></img>`
 const entryContainer = document.querySelector(".entryLog")
 
+
 const factory = {
     makeJournalEntryComponent (journalEntry) {
     // Create your own HTML structure for a journal entry

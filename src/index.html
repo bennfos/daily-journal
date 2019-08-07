@@ -37,22 +37,33 @@
                     <label class="serif" for="mood">Mood for the day</label>
                     <select required name="mood" id="mood">
                             <option value="" disabled selected>Select your current mood</option>
-                        <option value="Smile, you son of a bitch.">Smile, you son of a bitch.</option>
-                        <option value="I think the tide's with us. --Keep kicking.">I think the tide's with us. --Keep kicking.</option>
-                        <option value="I'll catch this bird for ya, but it ain't gonna be easy.">I'll catch this bird for ya, but it ain't gonna be easy.</option>
-                        <option value="You're gonna need a bigger boat.">You're gonna need a bigger boat.</option>
-                        <option value="There's a clinical name for it, isn't there? --Drowning.">There's a clinical name for it, isn't there? --Drowning.</option>
-                        <option value="🎶Farewell and adieu to you, fair Spanish ladies🎶">🎶Farewell and adieu to you, fair Spanish ladies🎶</option>
+                        <option value="Smile, you son of a bitch.">5 - Smile, you son of a bitch.</option>
+                        <option value="I think the tide's with us. --Keep kicking.">4 - I think the tide's with us. --Keep kicking.</option>
+                        <option value="I'll catch this bird for ya, but it ain't gonna be easy.">3 - I'll catch this bird for ya, but it ain't gonna be easy.</option>
+                        <option value="You're gonna need a bigger boat.">2 - You're gonna need a bigger boat.</option>
+                        <option value="There's a clinical name for it, isn't there? --Drowning.">1 - There's a clinical name for it, isn't there? --Drowning.</option>
+                        <option value="🎶Farewell and adieu to you, fair Spanish ladies🎶">0 - 🎶Farewell and adieu to you, fair Spanish ladies🎶</option>
                     </select>
                 </fieldset>
             </form>
             <input type="submit" class="recordEntryButton" id="recordEntryButton" value="Record Journal Entry" style="font-family: 'DM Serif Display', serif">
+            <fieldset>
+                <h2>Filter Entries by Mood</h2>
+                <input id="filterSmile" type="radio" name="filter" value="Smile, you son of a bitch.">5
+                <input id="filterKicking" type="radio" name="filter" value="I think the tide's with us. --Keep kicking.">4
+                <input id="filterCatch" type="radio" name="filter" value="I'll catch this bird for ya, but it ain't gonna be easy.">3
+                <input id="filterBiggerBoat" type="radio" name="filter" value="You're gonna need a bigger boat.">2
+                <input id="filterDrowning" type="radio" name="filter" value="There's a clinical name for it, isn't there? --Drowning.">1
+                <input id="filterFarewell" type="radio" name="filter" value="🎶Farewell and adieu to you, fair Spanish ladies🎶">0
+            </fieldset>
         </div>
         
         <div id="entryLogContainer">
             <article class="entryLog">
+
+            </article>
         </div>
-        </article>
+        
         <script type="module" src="scripts/journal.js"></script>
     </main>
 </body>
