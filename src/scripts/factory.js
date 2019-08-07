@@ -42,6 +42,10 @@ const factory = {
             <p class="topMarginSmall archivo">${journalEntry.date}</p>
             <p class="serif serif--tiny">${journalEntry.entry}</p>
             <p class="serif serif--tiny">Mood: "${journalEntry.mood}"</p>
+            <div class="entryButton--container">
+                <button class="delete" id="deleteEntry--${journalEntry.id}" style="font-family: 'DM Serif Display', serif">Delete Entry</button>
+                <button class="edit" id="editEntry--${journalEntry.id}" style="font-family: 'DM Serif Display', serif">Edit Entry</button>
+            </div>
         </div>
     `
     },

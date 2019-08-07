@@ -27,6 +27,34 @@
       "entry": "So today, I helped some friends with their journals, which was a great way to reinforce my learning of the JavaScript functions and how they interact with the API. BUT THEN, I realized I had accidentally deleted quite a few uncommitted changes to my own journal code....which meant it was not working, which meant I had to spend the rest of the rewriting it, which meant re-tracking-down stupid mistakes, such as typing \"applicaTINO\" instead of application. So THAT was cool.",
       "mood": "🎶Farewell and adieu to you, fair Spanish ladies🎶",
       "id": 5
+    },
+    {
+      "date": "2019-08-06",
+      "concept": "filter()",
+      "entry": "Tried all day to filter my array of entries, but just couldn't get it to work. I started from scratch twice, and got some code from Haroon to modify. Still not working.",
+      "mood": "🎶Farewell and adieu to you, fair Spanish ladies🎶",
+      "id": 6
+    },
+    {
+      "date": "2019-08-07",
+      "concept": "filter(), pt.2 ",
+      "entry": "FINALLY got it to work. Once I got over myself and made it simple (by making the radio input values the same as the mood values) it, was pretty simple, especially since I had Haroon's code to follow.",
+      "mood": "I'll catch this bird for ya, but it ain't gonna be easy.",
+      "id": 7
+    },
+    {
+      "date": "2019-08-07",
+      "concept": "API DELETE method",
+      "entry": "After some struggle trying to get my delete buttons to work, I finally realized I had simply copied the wrong server URL. Wasted a lot of time. Otherwise, nailed it",
+      "mood": "I'll catch this bird for ya, but it ain't gonna be easy.",
+      "id": 8
+    },
+    {
+      "date": "2019-08-07",
+      "concept": "Button Styling",
+      "entry": "Added a click \"press down\" animation on the record button. Let's see if it works?",
+      "mood": "Smile, you son of a bitch.",
+      "id": 9
     }
   ]
 }
