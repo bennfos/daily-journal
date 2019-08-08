@@ -94,6 +94,15 @@ main {
     margin: 10px;
 }
 
+.edit {
+    opacity: 0.85;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+
 .entryButton--container {
     display: flex;
 }
