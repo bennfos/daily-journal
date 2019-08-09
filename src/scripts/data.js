@@ -37,20 +37,20 @@ const API = {
             moodInput.value = entry.mood
         })
     },
-    editJournalEntry(entryId) {
+    editJournalEntry(updatedObject, entryId) {
         return fetch(`http://localhost:3000/entries/${entryId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify()
+            body: JSON.stringify(updatedObject)
         })
-        .then(response => response.json(updatedObject))
+        .then(response => response.json())
         .then(() => {
             const hiddenEntryId = document.querySelector("#entryId")
             hiddenEntryId.value = ""
         })
-    },
+    }
 }
 
 export default API

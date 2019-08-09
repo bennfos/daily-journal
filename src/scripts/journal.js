@@ -22,10 +22,14 @@ API.getEntriesData()
 
 button.addEventListener("click", (event) => {
     const hiddenEntryId = document.querySelector("#entryId")
+    const newEntry = factoryObject.factory.makeEntryObject(dateInput.value, conceptInput.value, entryInput.value, moodInput.value)
     if (hiddenEntryId.value !== "") {
-        API.editJournalEntry(hiddenEntryId.value) 
+        API.editJournalEntry(newEntry, hiddenEntryId.value) 
+        .then(() => {
+            API.getEntriesData()
+            .then(entries => render.renderEntry(entries))
+        })
     } else {
-        const newEntry = factoryObject.factory.makeEntryObject(dateInput.value, conceptInput.value, entryInput.value, moodInput.value)
         if (dateInput.value === "" || conceptInput.value === "" || entryInput.value === "" || moodInput.value === "") {
             alert("Please fill in all fields before submitting")
         } else {
@@ -34,12 +38,12 @@ button.addEventListener("click", (event) => {
                 API.getEntriesData()
                 .then(entries => render.renderEntry(entries))
             })
-        dateInput.value = ""
-        conceptInput.value = ""
-        entryInput.value = ""
-        moodInput.value = ""
         }
     }
+    dateInput.value = ""
+    conceptInput.value = ""
+    entryInput.value = ""
+    moodInput.value = ""
 })
 
 const radioButtonSmile = document.querySelector("#filterSmile")

@@ -2,7 +2,7 @@
   "entries": [
     {
       "date": "2019-07-15",
-      "concept": "Functions",
+      "concept": "Functions!!!",
       "entry": "Practiced creating functions with Book 2, ch. 4 exercises. Was able to get most of them but struggled with using the forEach array method within functions",
       "mood": "I think the tide's with us. --Keep kicking.",
       "id": 1
@@ -39,7 +39,7 @@
       "date": "2019-08-07",
       "concept": "filter(), pt.2 ",
       "entry": "FINALLY got it to work. Once I got over myself and made it simple (by making the radio input values the same as the mood values) it, was pretty simple, especially since I had Haroon's code to follow.",
-      "mood": "I'll catch this bird for ya, but it ain't gonna be easy.",
+      "mood": "You're gonna need a bigger boat.",
       "id": 7
     },
     {

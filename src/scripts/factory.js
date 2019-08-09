@@ -15,7 +15,9 @@ const farewellGIF = `<img class="gifLink" src="https://media.giphy.com/media/6fr
 const entryContainer = document.querySelector(".entryLog")
 
 
+
 const factory = {
+
     makeJournalEntryComponent (journalEntry) {
     // Create your own HTML structure for a journal entry
     if (journalEntry.mood === keepKicking) {       
