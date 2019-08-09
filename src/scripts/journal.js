@@ -6,6 +6,7 @@ const button = document.getElementById("recordEntryButton")
 
 
 
+
 import render from "./dom.js"
 import API from "./data.js"
 import factoryObject from "./factory.js"
@@ -20,19 +21,24 @@ API.getEntriesData()
 
 
 button.addEventListener("click", (event) => {
-    const newEntry = factoryObject.factory.makeEntryObject(dateInput.value, conceptInput.value, entryInput.value, moodInput.value)
-    if (dateInput.value === "" || conceptInput.value === "" || entryInput.value === "" || moodInput.value === "") {
-        alert("Please fill in all fields before submitting")
+    const hiddenEntryId = document.querySelector("#entryId")
+    if (hiddenEntryId.value !== "") {
+        API.editJournalEntry(hiddenEntryId.value) 
     } else {
-    API.saveJournalEntry(newEntry)
-        .then(() => { 
-            API.getEntriesData()
-            .then(entries => render.renderEntry(entries))
-        })
-    dateInput.value = ""
-    conceptInput.value = ""
-    entryInput.value = ""
-    moodInput.value = ""
+        const newEntry = factoryObject.factory.makeEntryObject(dateInput.value, conceptInput.value, entryInput.value, moodInput.value)
+        if (dateInput.value === "" || conceptInput.value === "" || entryInput.value === "" || moodInput.value === "") {
+            alert("Please fill in all fields before submitting")
+        } else {
+        API.saveJournalEntry(newEntry)
+            .then(() => {
+                API.getEntriesData()
+                .then(entries => render.renderEntry(entries))
+            })
+        dateInput.value = ""
+        conceptInput.value = ""
+        entryInput.value = ""
+        moodInput.value = ""
+        }
     }
 })
 
@@ -119,4 +125,15 @@ factoryObject.entryContainer.addEventListener("click", event => {
                 render.renderEntry(entries)
             })
     }
+})
+
+
+
+factoryObject.entryContainer.addEventListener("click", event => {
+    if (event.target.id.startsWith("editEntry--")) {
+        const entryToEdit = event.target.id.split("--")[1]
+        // console.log(entryToEdit)
+        API.updateFormFields(entryToEdit)
+    }
+    
 })

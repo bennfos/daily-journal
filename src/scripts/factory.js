@@ -37,7 +37,7 @@ const factory = {
         entryContainer.innerHTML += farewellGIF
     }
     return `
-        <div id="entry" class="gif entry journalEntryForm">
+        <div id="entry" class="gif entry journalEntryForm entry--${journalEntry.id}">
             <h2 class="bottomMarginSmall serif serif--small" >${journalEntry.concept}</h2>
             <p class="topMarginSmall archivo">${journalEntry.date}</p>
             <p class="serif serif--tiny">${journalEntry.entry}</p>
